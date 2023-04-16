@@ -1,0 +1,6 @@
+um pragram com 600 variaveis 
+vertorindexada              int nome4
+indexada                     nome [0]='s'
+matriz                      int valores [2] [2]
+                            vaores
+*algoritmo da a soma da matriz triangular inferior

@@ -1,0 +1,9 @@
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\bin\Debug\calculadora.exe
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\bin\Debug\calculadora.pdb
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\bin\Debug\calculadora.xml
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\obj\Debug\calculadora.calculadora.resources
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\obj\Debug\calculadora.Resources.resources
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\obj\Debug\calculadora.vbproj.GenerateResource.Cache
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\obj\Debug\calculadora.exe
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\obj\Debug\calculadora.xml
+E:\EXECUTAVEIS LIBERADOS\calculadora\calculadora\obj\Debug\calculadora.pdb

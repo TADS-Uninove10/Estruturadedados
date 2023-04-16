@@ -1,0 +1,169 @@
+A declaração de variáveis é feita em 2 passos: 
+1- declarado o conteúdo da estrutura 
+2- declarado o dado que tem o tipo base 
+
+struct x {char nome, endereco, telefone; int idade; float renda;}; 
+struct x cliente[10]; 
+for(i=0;i<10;i++) 
+{ 
+printf("Informe nome: "); 
+scanf("%s", &cliente[i].nome); 
+printf("Informe endereco: "); 
+scanf("%s", &cliente[i].endereco); 
+printf("Informe telefone: "); 
+scanf("%d", &cliente[i].telefone); 
+printf("Informe idade: "); 
+scanf("%d", &cliente[i].idade); 
+printf("Informe renda media: "); 
+scanf("%f", &cliente[i].renda); 
+}//fecha for 
+
+//exibir cadastro 
+for(i=0;i<10;i++) 
+{ 
+printf("Nome: ", cliente[i].nome); 
+printf("Endereco: ", cliente[i].endereco); 
+printf("Telefone: ", cliente[i].telefone); 
+printf("Idade: ", cliente[i].idade); 
+printf("Renda media: ", cliente[i].renda); 
+} 
+
+getch(); 
+return 0;
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(int argc, char** argv)
+{
+   char** nomes; // vetor de strings
+   int qtd; // quantidade de strings a serem comparadas
+   int i,j; // contadores
+   
+   char* temp = (char*) malloc(50*sizeof(char)); 
+
+   printf("Quantos nomes deseja ordenar ? : ");
+   scanf("%i",&qtd);
+   
+   nomes = (char**) malloc(qtd*sizeof(char*));
+   for(i = 0; i < qtd;++i)
+   {
+      printf("Entre com nome %i : ",i);
+      nomes[i] = (char*) malloc(50*sizeof(char));
+      scanf("%s",nomes[i]);
+      printf("\n");
+   }
+   
+   
+  // Rotina de ordenação
+   for(i = 1; i < qtd; i++) 
+      for (j = 0; j < qtd -1 ; j++)
+         if(strcmp(nomes[j],nomes[j+1]) > 0)
+         {   
+            strcpy(temp,nomes[j]);
+            strcpy(nomes[j],nomes[j+1]);
+            strcpy(nomes[j+1],temp);                               
+         }
+      
+     free(temp);   
+  
+   printf("Imprimindo os nomes ordenados\n");     
+   for(i = 0; i < qtd;++i)
+     printf("%s\n",nomes[i]);      
+   
+  // liberando a memória alocada dinâmicamente
+   for(i = 0; i < qtd;++i)
+      free(nomes[i]);
+   
+     // liberando a memória alocada dinâmicamente
+    free(nomes);
+   
+
+   return(0);
+     
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#include<stdio.h>
+#include<stdlib.h>
+ 
+#define total 10
+int main()
+{ int v[total];
+int x,inicio,meio , fim ;
+int num; //número a ser buscado.
+printf("\nPreencha o vetor na forma ordenada\n");
+for(x=0;x<10;x++)
+{ printf("insira o elemento %d do vetor\n",x+1);
+scanf("%d",&v[x]);
+}
+printf("\nInsira o numero que deseja fazer a busca binaria\n");
+scanf("%d",&num); 
+inicio=0;
+fim=9;
+ 
+if(v[inicio]==num){
+printf("o numero encontrado no indice %d\n",inicio);
+}
+else if(v[fim]==num){
+printf("o numero encontrado no indice %d\n",fim);
+}
+else{
+while(inicio<fim)
+{ meio=(inicio+fim)/2; //aqui no caso estou fazendo um typecasting, irei truncar o valor do quociente para pegar somente a parte inteira.
+if ( v[meio]==num)
+{ printf("o numero encontrado no indice %d\n",meio);break;
+}
+else 
+if(num>v[meio])
+{ inicio=meio+1;
+}
+else
+{ fim=meio;
+}
+} 
+} 
+printf("\nPressione uma tecla para sair\n");
+system("pause");
+fflush(stdin);
+return 0;
+}
+
+===========
+
+#define total 10
+ int main()
+{ int v[total];
+  int x,inicio,meio , fim ;
+
+  int num; //número a ser buscado.
+   printf("\nPreencha o vetor na forma ordenada\n");
+   for(x=0;x<10;x++)
+   { printf("insira o elemento %d do vetor\n",x+1);
+     scanf("%d",&v[x]);
+    }
+    printf("\nInsira o numero que deseja fazer a busca binaria\n");
+    scanf("%d",&num); 
+      inicio=0;
+      meio=(inicio+fim)/2;
+      fim=9;
+    while(v[inicio]<fim)
+    { meio=((int)inicio+fim)/2; //aqui no caso estou fazendo um typecasting, irei truncar o valor do quociente para pegar somente a parte inteira.
+      if ( v[meio]==num)
+      { printf("o numero encontrado no indice %d\n",meio);
+       }
+        else 
+          if(num>v[meio])
+           { inicio=meio+1;
+           }
+        else
+        { fim=meio-1;
+        }
+     }   
+                  
+   fflush(stdin);
+   puts("Pressione uma tecla para sair\n");
+    getch();
+    return 0;
+}  

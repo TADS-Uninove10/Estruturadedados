@@ -1,0 +1,8 @@
+Construa uma função para entrada de dados que não permita ao usuario digitar mais caracteres
+do que o vetor (String) planejada
+gets()
+getch()
+puts()
+http://www.metropoledigital.ufrn.br/aulas/disciplinas/prog_est/aula_03.html
+
+http://linguagemc.com.br/string-em-c-vetor-de-caracteres/
